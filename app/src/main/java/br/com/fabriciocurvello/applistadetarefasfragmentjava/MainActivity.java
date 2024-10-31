@@ -1,7 +1,6 @@
 package br.com.fabriciocurvello.applistadetarefasfragmentjava;
 
 import android.os.Bundle;
-import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Tarefa> listaTarefas = new ArrayList<>();
 
-    private FrameLayout frameLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        frameLayout = findViewById(R.id.frameLayout);
+        // Adiciona uma tarefa de teste
+        listaTarefas.add(new Tarefa("Tarefa de Teste", "01/11/2024", "Local de Teste", "Anotação de Teste"));
+
 
         // Carregar o fragmento de lista de tarefas inicialmente
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ListaTarefasFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ListaTarefasFragment()).commit();
         }
     } // fim do onCreate()
 

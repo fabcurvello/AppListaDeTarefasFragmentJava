@@ -4,81 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroTarefaFragment" >
+    tools:context=".DetalhesTarefaFragment" >
 
-    <EditText
-        android:id="@+id/et_nome_tarefa"
+    <TextView
+        android:id="@+id/tv_nome_tarefa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Nome da tarefa"
-        android:inputType="text"
+        android:text="Nome da Tarefa"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_data_tarefa"
+    <TextView
+        android:id="@+id/tv_data_tarefa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Data"
-        android:inputType="datetime|date"
+        android:text="Data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_nome_tarefa" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome_tarefa" />
 
-    <EditText
-        android:id="@+id/et_local_tarefa"
+    <TextView
+        android:id="@+id/tv_local_tarefa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Local"
-        android:inputType="text"
+        android:text="Local"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_data_tarefa" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_tarefa" />
 
-    <EditText
-        android:id="@+id/et_descricao_tarefa"
+    <TextView
+        android:id="@+id/tv_descricao_tarefa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Descrição"
-        android:inputType="text"
+        android:text="Descrição"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_local_tarefa" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_local_tarefa" />
 
     <Button
-        android:id="@+id/bt_cadastrar_tarefa"
+        android:id="@+id/bt_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Cadastrar Tarefa"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_descricao_tarefa" />
-
-    <Button
-        android:id="@+id/bt_voltar_sem_cadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Voltar Sem Cadastrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_cadastrar_tarefa" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_descricao_tarefa"
+        app:layout_constraintVertical_bias="0.16000003" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,7 @@ public class CadastroTarefaFragment extends Fragment {
     private EditText etLocalTarefa;
     private EditText etDescricaoTarefa;
     Button btCadastrarTarefa;
+    Button btVoltarSemCadastrar;
 
     public CadastroTarefaFragment() {
         // Required empty public constructor
@@ -36,6 +37,8 @@ public class CadastroTarefaFragment extends Fragment {
         etDataTarefa = view.findViewById(R.id.et_data_tarefa);
         etLocalTarefa = view.findViewById(R.id.et_local_tarefa);
         etDescricaoTarefa = view.findViewById(R.id.et_descricao_tarefa);
+        btCadastrarTarefa = view.findViewById(R.id.bt_cadastrar_tarefa);
+        btVoltarSemCadastrar = view.findViewById(R.id.bt_voltar_sem_cadastrar);
 
         btCadastrarTarefa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,14 @@ public class CadastroTarefaFragment extends Fragment {
                     ((MainActivity) getActivity()).adicionarTarefa(tarefa);
                     getActivity().getSupportFragmentManager().popBackStack();
                 }
+            }
+        });
+
+        btVoltarSemCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Volta para o fragmento anterior sem cadastrar a tarefa
+                getActivity().getSupportFragmentManager().popBackStack();
             }
         });
 

@@ -1,6 +1,8 @@
 package br.com.fabriciocurvello.applistadetarefasfragmentjava;
 
-public class Tarefa {
+import java.io.Serializable;
+
+public class Tarefa implements Serializable {
 
     private String nomeTarefa;
     private String data;

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -19,6 +20,8 @@ import java.util.ArrayList;
  */
 public class ListaTarefasFragment extends Fragment {
 
+    private Button btAdicionarTarefa;
+
     public ListaTarefasFragment() {
         // Required empty public constructor
     }
@@ -28,6 +31,22 @@ public class ListaTarefasFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_lista_tarefas,container,false);
+
+        // Botão para adicionar nova tarefa
+        btAdicionarTarefa = view.findViewById(R.id.bt_adicionar_tarefa);
+        btAdicionarTarefa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Abre o fragmento de cadastro de tarefa
+                CadastroTarefaFragment cadastroTarefaFragment = new CadastroTarefaFragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, cadastroTarefaFragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
         LinearLayout layoutListaTarefas = view.findViewById(R.id.layout_lista_tarefas);
 
         ArrayList<Tarefa> tarefas = ((MainActivity) getActivity()).getListaTarefas();
@@ -41,7 +60,7 @@ public class ListaTarefasFragment extends Fragment {
                 public void onClick(View view) {
                     DetalhesTarefaFragment detalhesTarefaFragment = DetalhesTarefaFragment.newInstance(tarefa);
                     getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.fragment_container, detalhesfragment)
+                            .replace(R.id.fragment_container, detalhesTarefaFragment)
                             .addToBackStack(null)
                             .commit();
                 }
