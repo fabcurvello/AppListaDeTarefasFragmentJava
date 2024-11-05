@@ -1,4 +1,4 @@
-package br.com.fabriciocurvello.applistadetarefasfragmentjava;
+package br.com.fabriciocurvello.applistadetarefasfragmentjava.activity;
 
 import android.os.Bundle;
 
@@ -9,6 +9,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
+
+import br.com.fabriciocurvello.applistadetarefasfragmentjava.fragment.ListaTarefasFragment;
+import br.com.fabriciocurvello.applistadetarefasfragmentjava.R;
+import br.com.fabriciocurvello.applistadetarefasfragmentjava.model.Tarefa;
 
 public class MainActivity extends AppCompatActivity {
 

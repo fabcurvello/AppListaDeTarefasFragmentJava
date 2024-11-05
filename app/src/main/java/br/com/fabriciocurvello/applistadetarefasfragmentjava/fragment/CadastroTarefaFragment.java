@@ -1,4 +1,4 @@
-package br.com.fabriciocurvello.applistadetarefasfragmentjava;
+package br.com.fabriciocurvello.applistadetarefasfragmentjava.fragment;
 
 import android.os.Bundle;
 
@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import br.com.fabriciocurvello.applistadetarefasfragmentjava.R;
+import br.com.fabriciocurvello.applistadetarefasfragmentjava.activity.MainActivity;
+import br.com.fabriciocurvello.applistadetarefasfragmentjava.model.Tarefa;
 
 /**
  * A simple {@link Fragment} subclass.

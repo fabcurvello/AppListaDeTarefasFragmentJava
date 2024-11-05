@@ -1,4 +1,4 @@
-package br.com.fabriciocurvello.applistadetarefasfragmentjava;
+package br.com.fabriciocurvello.applistadetarefasfragmentjava.model;
 
 import java.io.Serializable;
 
