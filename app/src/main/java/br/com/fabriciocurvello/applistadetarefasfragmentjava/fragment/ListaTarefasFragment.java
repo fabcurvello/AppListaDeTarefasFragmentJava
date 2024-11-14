@@ -52,15 +52,22 @@ public class ListaTarefasFragment extends Fragment {
 
         LinearLayout layoutListaTarefas = view.findViewById(R.id.layout_lista_tarefas);
 
+        // List com todas as tarefas cadastradas
         ArrayList<Tarefa> tarefas = ((MainActivity) getActivity()).getListaTarefas();
 
-        layoutListaTarefas.removeAllViews();
+
+        layoutListaTarefas.removeAllViews(); // Esvazia o que estiver no LinearLayout
+
+        // para cada item da lista tarefas, um botão será criado exibindo o nome da tarefa.
         for (Tarefa tarefa : tarefas) {
             Button btTarefa = new Button(getActivity());
             btTarefa.setText(tarefa.getNomeTarefa());
             btTarefa.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+                    // Se um botão de tarefa for clicado, um DetalhesTarefaFragment é criado e exibido
+                    // e o objeto tarefa (que foi clicado) é passado como argumento ao acionar o newInstance()
                     DetalhesTarefaFragment detalhesTarefaFragment = DetalhesTarefaFragment.newInstance(tarefa);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, detalhesTarefaFragment)
