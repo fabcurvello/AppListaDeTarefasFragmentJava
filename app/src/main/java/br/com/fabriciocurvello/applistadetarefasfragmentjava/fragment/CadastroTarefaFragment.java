@@ -55,6 +55,8 @@ public class CadastroTarefaFragment extends Fragment {
                 if (!nome.isEmpty()) {
                     Tarefa tarefa = new Tarefa(nome, data, local, descricao);
                     ((MainActivity) getActivity()).adicionarTarefa(tarefa);
+
+                    // Volta para o fragmento anterior sem cadastrar a tarefa
                     getActivity().getSupportFragmentManager().popBackStack();
                 }
             }

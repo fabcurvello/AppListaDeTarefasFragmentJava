@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Adiciona uma tarefa de teste
-        //listaTarefas.add(new Tarefa("Estudar Mobile", "14/11/2024", "Aula Remota Anima", "Estudar Mobile Android Nativo com Java"));
+        listaTarefas.add(new Tarefa("Estudar Mobile", "14/11/2024", "Aula Remota Anima", "Estudar Mobile Android Nativo com Java"));
 
 
         // Carregar o fragmento de lista de tarefas inicialmente

@@ -82,7 +82,8 @@ public class ListaTarefasFragment extends Fragment {
 
 //        // Inflate the layout for this fragment
 //        return inflater.inflate(R.layout.fragment_lista_tarefas, container, false);
-    }
+
+    } // fim do onCreateView()
 
 //    // TOD0: Rename parameter arguments, choose names that match
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
